@@ -17,11 +17,11 @@ public class AdministratorScreen extends javax.swing.JFrame {
     }
 
     public void image(){
-        ImageIcon img = new ImageIcon("C:\\Users\\Garcia\\Dropbox\\UTFPR\\Materias\\Programação Desktop\\Trabalho 2\\Desktop\\src\\images\\Side.png");
+        ImageIcon img = new ImageIcon("C:\\Users\\Garcia\\Dropbox\\UTFPR\\Materias\\Programação Desktop\\Trabalho 2\\DeskCAR\\src\\images\\Side.png");
         Image image = img.getImage();
         img.setImage(image.getScaledInstance(140, 385, java.awt.Image.SCALE_AREA_AVERAGING));
         sideIcon.setIcon(img);
-        img = new ImageIcon("C:\\Users\\Garcia\\Dropbox\\UTFPR\\Materias\\Programação Desktop\\Trabalho 2\\Desktop\\src\\images\\Logo.png");
+        img = new ImageIcon("C:\\Users\\Garcia\\Dropbox\\UTFPR\\Materias\\Programação Desktop\\Trabalho 2\\DeskCAR\\src\\images\\Logo.png");
         setIconImage(img.getImage());
     }
     

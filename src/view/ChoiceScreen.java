@@ -3,10 +3,12 @@ package view;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import utils.ManageView;
+import view.SaleScreen;
 
 public class ChoiceScreen extends javax.swing.JFrame {
     
     ManageView manager = new ManageView();
+    SaleScreen sale;
 
     public ChoiceScreen() {
         initComponents();
@@ -17,11 +19,11 @@ public class ChoiceScreen extends javax.swing.JFrame {
     }
     
     public void image(){
-        ImageIcon img = new ImageIcon("C:\\Users\\Garcia\\Dropbox\\UTFPR\\Materias\\Programação Desktop\\Trabalho 2\\Desktop\\src\\images\\Side.png");
+        ImageIcon img = new ImageIcon("C:\\Users\\Garcia\\Dropbox\\UTFPR\\Materias\\Programação Desktop\\Trabalho 2\\DeskCAR\\src\\images\\Side.png");
         Image image = img.getImage();
         img.setImage(image.getScaledInstance(140, 420, java.awt.Image.SCALE_AREA_AVERAGING));
         sideIcon.setIcon(img);
-        img = new ImageIcon("C:\\Users\\Garcia\\Dropbox\\UTFPR\\Materias\\Programação Desktop\\Trabalho 2\\Desktop\\src\\images\\Logo.png");
+        img = new ImageIcon("C:\\Users\\Garcia\\Dropbox\\UTFPR\\Materias\\Programação Desktop\\Trabalho 2\\DeskCAR\\src\\images\\Logo.png");
         setIconImage(img.getImage());
     }
     
@@ -68,6 +70,11 @@ public class ChoiceScreen extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton2.setText("Vendas");
         jButton2.setFocusPainted(false);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton3.setText("Sair");
@@ -125,6 +132,12 @@ public class ChoiceScreen extends javax.swing.JFrame {
         manager.administrator();
         setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        sale = new SaleScreen();
+        sale.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
